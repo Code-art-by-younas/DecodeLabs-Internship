@@ -10,7 +10,7 @@ while True:
     
     # Invalid input check (non-digit)
     if not user.isdigit():
-        print("❌ Invalid input! Please enter a number.")
+        print("Invalid input! Please enter a number.")
         continue
     
     user = int(user)
@@ -19,24 +19,24 @@ while True:
     if user == 1:
         new_task = input("Enter task: ")
         task.append(new_task)
-        print(f"✅ Task added: {new_task}")
+        print(f"Task added: {new_task}")
     
     # ---------- VIEW ----------
     elif user == 2:
         if not task:
-            print("📭 No tasks yet.")
+            print(" No tasks yet.")
         else:
-            print("\n📋 Your Tasks:")
+            print("\n Your Tasks:")
             for index, t in enumerate(task, start=1):
                 print(f"   {index}. {t}")
     
     # ---------- DELETE ----------
     elif user == 3:
         if not task:
-            print("📭 No tasks to delete.")
+            print(" No tasks to delete.")
         else:
             # Show tasks with numbers
-            print("\n📋 Your Tasks:")
+            print("\n Your Tasks:")
             for index, t in enumerate(task, start=1):
                 print(f"   {index}. {t}")
             
@@ -45,7 +45,7 @@ while True:
             
             # Check if input is valid number
             if not delete_num.isdigit():
-                print("❌ Invalid input! Please enter a number.")
+                print(" Invalid input! Please enter a number.")
                 continue
             
             delete_num = int(delete_num)
@@ -53,14 +53,14 @@ while True:
             # Check if number is within range
             if 1 <= delete_num <= len(task):
                 deleted_task = task.pop(delete_num - 1)  # -1 because list index starts at 0
-                print(f"✅ Task deleted: {deleted_task}")
+                print(f" Task deleted: {deleted_task}")
             else:
-                print(f"❌ Invalid task number! Choose between 1 and {len(task)}.")
+                print(f" Invalid task number! Choose between 1 and {len(task)}.")
     
     # ---------- EXIT ----------
     elif user == 4:
-        print("👋 Goodbye!")
+        print(" Goodbye!")
         break
     
     else:
-        print("❌ Invalid choice! Please select 1, 2, 3, or 4.")
+        print(" Invalid choice! Please select 1, 2, 3, or 4.")
