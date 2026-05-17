@@ -53,6 +53,26 @@ This repository contains all of my projects completed during the DecodeLabs Pyth
 - Python 3
 
 ---
+# project_3 Random Password Generator 🔐
+
+This project is part of the DecodeLabs Python Internship (Week 3).
+
+## Objective
+Generate a secure random password based on the length entered by the user.
+
+## Features
+- Takes password length as input
+- Validates user input
+- Generates a secure password
+- Uses letters, numbers, and symbols
+- Shows password strength and entropy
+
+## Modules Used
+- `string`
+- `secrets`
+- `math`
+
+
 
 ## 🎯 Internship Learning Goals
 Through these projects, I am learning:
